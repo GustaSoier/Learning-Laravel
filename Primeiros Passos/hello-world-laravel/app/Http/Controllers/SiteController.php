@@ -9,7 +9,15 @@ class SiteController extends Controller
     //
 
     public function index() {
-        return view('bemvindo');
+        $nome = 'Gustavo';
+        $idade = 90;
+
+        $data = [
+            'apelido_nome' => $nome,
+            'idade' => $idade
+        ];
+
+        return view('bemvindo', $data);
     }
 
     public function exit() {
