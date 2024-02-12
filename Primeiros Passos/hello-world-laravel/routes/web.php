@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SairController;
 use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [SiteController::class, 'index'])->name('site');
 
+Route::get('/sair', [SiteController::class, 'exit'])->name('sair');
 // Route::get('/', function () {
 //     return view('bemvindo');
 // });
