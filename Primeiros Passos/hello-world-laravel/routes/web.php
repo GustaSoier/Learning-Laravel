@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('bemvindo');
-});
+
+Route::get('/', [SiteController::class, 'index'])->name('site');
+
+// Route::get('/', function () {
+//     return view('bemvindo');
+// });
