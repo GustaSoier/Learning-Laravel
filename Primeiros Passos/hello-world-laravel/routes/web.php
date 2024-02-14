@@ -19,6 +19,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [SiteController::class, 'index'])->name('site');
 
 Route::get('/sair', [SiteController::class, 'exit'])->name('sair');
+
+Route::get('/usuarios/{qnt}', [SiteController::class, 'users'])->name('user');
 // Route::get('/', function () {
 //     return view('bemvindo');
 // });

@@ -10,11 +10,9 @@ class SiteController extends Controller
 
     public function index() {
         $nome = 'Gustavo';
-        $idade = 90;
 
         $data = [
             'apelido_nome' => $nome,
-            'idade' => $idade
         ];
 
         return view('bemvindo', $data);
@@ -22,5 +20,14 @@ class SiteController extends Controller
 
     public function exit() {
         return view('sair');
+    }
+
+    public function users(Request $r) {
+
+        $data = [
+            'quantidade' => $r -> qnt
+        ];
+
+        return view('usuarios', $data);
     }
 }
