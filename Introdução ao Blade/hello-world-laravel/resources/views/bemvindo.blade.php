@@ -8,10 +8,15 @@
 </head>
 <body>
 
-    <h1>Bem Vindo, {{ $nome }}</h1>
-    <h2>1+1 é: {{ 1+1 }}</h2>
-    <h3>Código HTML: {{ $html }}</h3>
-    <p>Código HTML: {!! $html !!}</p>
+    <h1>{{ $nome == 'Gustavo' ? 'Sim' : 'Não' }}</h1>
+
+    <span>O usuário é Gustavo?</span>
+    @if ($nome == 'Gustavo')
+        <h1>Sim</h1>
+    @else
+        <h2>Não</h2>
+    @endif
+
 
 </body>
 </html>
