@@ -15,7 +15,25 @@
     @foreach ($ingredientes as $ing)
         <p>{{ $ing }} -
         @component('components.botao')
+            @slot('href')
+                https://google.com.br
+            @endslot
 
+            @slot('cor')
+                blue
+            @endslot
+            Editar
+        @endcomponent
+
+        @component('components.botao')
+            @slot('href')
+                https://amazon.com
+            @endslot
+
+            @slot('cor')
+                red
+            @endslot
+            Deletar
         @endcomponent
         </p>
     @endforeach

@@ -1,1 +1,1 @@
-<button style="background-color: red; border: 0; color: white">Deletar</button>
+<a href="{{ $href }}" style="background-color: {{ $cor }}; border: 0; color: white; outline: none;">{{ $slot }}</a>
