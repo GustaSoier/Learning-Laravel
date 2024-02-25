@@ -22,4 +22,8 @@ class SiteController extends Controller
         return view('bemvindo', $qualquer_coisa);
     }
 
+    public function index2() {
+        return view('include');
+    }
+
 }
