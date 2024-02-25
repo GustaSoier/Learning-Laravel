@@ -11,8 +11,12 @@ class SiteController extends Controller
     public function index() {
 
         $qualquer_coisa= [
-            'nome' => 'Gustavo',
-            'html' => '<b style="color: red">Negrito</b>'
+            'ingredientes' => [
+                'farinha',
+                'ovos',
+                'farinha',
+                'ovos'
+            ]
         ];
 
         return view('bemvindo', $qualquer_coisa);

@@ -8,14 +8,14 @@
 </head>
 <body>
 
-    <h1>{{ $nome == 'Gustavo' ? 'Sim' : 'Não' }}</h1>
+    @for($i=1;$i<10;$i++)
+        <p>O valor de I é: {{ $i }}</p>
+    @endfor
 
-    <span>O usuário é Gustavo?</span>
-    @if ($nome == 'Gustavo')
-        <h1>Sim</h1>
-    @else
-        <h2>Não</h2>
-    @endif
+    @foreach ($ingredientes as $ing)
+        <p>{{ $ing }} - <span>Deletar</span></p>
+    @endforeach
+
 
 
 </body>
