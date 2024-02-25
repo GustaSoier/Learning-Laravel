@@ -13,7 +13,11 @@
     @endfor
 
     @foreach ($ingredientes as $ing)
-        <p>{{ $ing }} - <span>Deletar</span></p>
+        <p>{{ $ing }} -
+        @component('components.botao')
+
+        @endcomponent
+        </p>
     @endforeach
 
 
