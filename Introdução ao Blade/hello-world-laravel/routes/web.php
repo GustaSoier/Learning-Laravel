@@ -20,5 +20,3 @@ Route::get('/layout', [SiteController::class, 'layout']);
 
 Route::get('/', [SiteController::class, 'index'])->name('site');
 
-Route::get('/include', [SiteController::class, 'index2']);
-
