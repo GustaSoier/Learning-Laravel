@@ -1,24 +1,16 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Layout</title>
-</head>
-<body style="margin: 0; padding: 0;">
+@extends('layouts.app')
 
-    <nav style="background-color: #ccc; padding: 20px; border-bottom: 1px solid grey">
-        Este é o header
-    </nav>
 
-    <main style="padding: 20px; height: 54vh;">
-        Este é o conteúdo
-    </main>
+@section('header')
+    <x-nav>
+    </x-nav>
+@endsection
 
-    <footer style="padding: 20px; background: #333; color: #fefefe">
-        Este é o rodapé
-    </footer>
+@section('content')
+    <h1>Este é o conteúdo principal</h1>
+@endsection
 
-</body>
-</html>
+@section('footer')
+    <x-footer>
+    </x-footer>
+@endsection
