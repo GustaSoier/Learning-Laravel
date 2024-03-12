@@ -7,14 +7,15 @@
     <title>Layout</title>
 </head>
 <body style="margin: 0; padding: 0;">
-
-    @section('header')
+    <x-nav>
+    </x-nav>
 
     <main style="padding: 20px; height: 54vh;">
         @yield('content')
     </main>
 
-    @section('footer')
+    <x-footer>
+    </x-footer>
 
 </body>
 </html>
