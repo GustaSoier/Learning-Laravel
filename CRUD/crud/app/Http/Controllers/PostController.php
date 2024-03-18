@@ -41,4 +41,15 @@ class PostController extends Controller
 
         return $posts;
     }
+
+    public function update(Request $request){
+        $post = Post::where('id','>',1)->update([
+            'author' => 'Alessandro',
+            'title' => 'Alterado'
+        ]);
+        // $post > title = 'Meu Post atualizado';
+        $post -> save();
+
+        return $post;
+    }
 }
