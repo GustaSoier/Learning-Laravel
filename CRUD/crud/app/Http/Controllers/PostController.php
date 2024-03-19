@@ -42,7 +42,7 @@ class PostController extends Controller
         return $posts;
     }
 
-    public function update(Request $request){
+    public function update(Request $request) {
         $post = Post::where('id','>',1)->update([
             'author' => 'Alessandro',
             'title' => 'Alterado'
@@ -50,6 +50,11 @@ class PostController extends Controller
         // $post > title = 'Meu Post atualizado';
         $post -> save();
 
+        return $post;
+    }
+
+    public function delete(Request $request) {
+        $post = Post::where('id','>',0)->delete();
         return $post;
     }
 }
